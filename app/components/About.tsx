@@ -65,8 +65,15 @@ export default function About() {
               <p>
                 Ankara'nın kalbinde,{" "}
                 <strong className="text-[#1A1A2E]">Bağlıca</strong>'da faaliyet
-                gösteren ve Ankara genelinde hizmet veren bir Coldwell Banker
-                Ultra Gayrimenkul Danışmanıyım.
+                gösteren ve Ankara genelinde hizmet veren bir{" "}
+                <strong className="text-[#1A1A2E]">Coldwell Banker Ultra Gayrimenkul Danışmanı</strong>yım.
+              </p>
+              <p>
+                2024 yılında{" "}
+                <strong className="text-[#1A1A2E]">Atılım Üniversitesi Yazılım Mühendisliği</strong>{" "}
+                bölümünden mezun oldum. Bu eğitim, bana çözüm üretme, teknolojiyi
+                etkin kullanma ve veri odaklı düşünme becerileri kazandırdı; bu
+                yetkinlikleri gayrimenkul süreçlerinde aktif olarak kullanıyorum.
               </p>
               <p>
                 Gayrimenkul sektörüne girme kararım, insanlara en önemli
@@ -78,8 +85,7 @@ export default function About() {
               <p>
                 <strong className="text-[#1A1A2E]">Coldwell Banker Ultra</strong>
                 'nın küresel ağını ve profesyonel altyapısını kullanarak, her
-                müşterime kişisel ve özverili bir hizmet sunmayı taahhüt
-                ediyorum.
+                müşterime kişisel ve özverili bir hizmet sunmayı taahhüt ediyorum.
               </p>
             </div>
 
