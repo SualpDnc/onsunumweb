@@ -48,7 +48,7 @@ export default function Navbar() {
               Sualp Danacı
             </span>
             <span className="text-[10px] tracking-widest uppercase text-[#B8963E]">
-              Coldwell Banker Ultra
+              Coldwell Banker KRG
             </span>
           </a>
 

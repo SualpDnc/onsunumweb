@@ -39,7 +39,7 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 text-[11px] sm:text-xs tracking-widest uppercase px-3 sm:px-4 py-2 rounded-full mb-5 sm:mb-6">
               <span className="w-2 h-2 rounded-full bg-[#B8963E] flex-shrink-0" />
-              <span>Coldwell Banker Ultra Gayrimenkul Danışmanı</span>
+              <span>Coldwell Banker KRG Gayrimenkul Danışmanı</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 sm:mb-6">
@@ -49,7 +49,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-white/70 text-sm sm:text-base lg:text-lg mb-7 sm:mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Bağlıca ve Ankara genelinde, hayalinizdeki evi bulmanız veya
+              Çayyolu ve Ankara genelinde, hayalinizdeki evi bulmanız veya
               gayrimenkulünüzü en doğru şekilde değerlendirmeniz için buradayım.
             </p>
 
@@ -74,7 +74,7 @@ export default function Hero() {
             <div className="mt-8 sm:mt-10 flex items-center gap-3 justify-center lg:justify-start">
               <div className="h-px w-8 sm:w-10 bg-[#B8963E]/50 flex-shrink-0" />
               <span className="text-white/50 text-[10px] sm:text-xs tracking-widest uppercase text-center">
-                Coldwell Banker Ultra Güvencesiyle
+                Coldwell Banker KRG Güvencesiyle
               </span>
               <div className="h-px flex-1 bg-[#B8963E]/50" />
             </div>
@@ -93,7 +93,7 @@ export default function Hero() {
 
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/15">
                 <Image
-                  src="/photo.jpg"
+                  src="/photo-2026.jpg"
                   alt="Sualp Danacı"
                   width={944}
                   height={1018}
@@ -111,7 +111,7 @@ export default function Hero() {
               {/* CB badge */}
               <div className="absolute -top-2 right-2 bg-[#B8963E] text-white rounded-full w-11 h-11 sm:w-12 sm:h-12 flex flex-col items-center justify-center shadow-lg">
                 <span className="text-[9px] sm:text-[10px] font-bold leading-tight">CB</span>
-                <span className="text-[9px] sm:text-[10px] leading-tight">Ultra</span>
+                <span className="text-[9px] sm:text-[10px] leading-tight">KRG</span>
               </div>
             </div>
           </motion.div>

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const values = [
   { label: "Dürüstlük", desc: "Her adımda şeffaf ve dürüst iletişim" },
-  { label: "Güven", desc: "Coldwell Banker Ultra çatısı altında garantili hizmet" },
+  { label: "Güven", desc: "Coldwell Banker KRG çatısı altında garantili hizmet" },
   { label: "Çözüm Odaklılık", desc: "Sorunlara değil, çözümlere odaklanırım" },
 ];
 
@@ -31,7 +31,7 @@ export default function About() {
               }}
             >
               <Image
-                src="/photo.jpg"
+                src="/photo-2026.jpg"
                 alt="Sualp Danacı"
                 width={944}
                 height={1018}
@@ -39,7 +39,7 @@ export default function About() {
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#003087]/75 to-transparent px-4 py-4 flex justify-center">
                 <span className="text-white text-[11px] sm:text-xs font-bold tracking-widest uppercase">
-                  Coldwell Banker Ultra
+                  Coldwell Banker KRG
                 </span>
               </div>
             </div>
@@ -64,9 +64,9 @@ export default function About() {
             <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed mb-7 sm:mb-8 text-sm sm:text-base">
               <p>
                 Ankara'nın kalbinde,{" "}
-                <strong className="text-[#1A1A2E]">Bağlıca</strong>'da faaliyet
+                <strong className="text-[#1A1A2E]">Çayyolu</strong>'da faaliyet
                 gösteren ve Ankara genelinde hizmet veren bir{" "}
-                <strong className="text-[#1A1A2E]">Coldwell Banker Ultra Gayrimenkul Danışmanı</strong>yım.
+                <strong className="text-[#1A1A2E]">Coldwell Banker KRG Gayrimenkul Danışmanı</strong>yım.
               </p>
               <p>
                 2024 yılında{" "}
@@ -83,7 +83,7 @@ export default function About() {
                 rehber olmak istememden doğdu.
               </p>
               <p>
-                <strong className="text-[#1A1A2E]">Coldwell Banker Ultra</strong>
+                <strong className="text-[#1A1A2E]">Coldwell Banker KRG</strong>
                 'nın küresel ağını ve profesyonel altyapısını kullanarak, her
                 müşterime kişisel ve özverili bir hizmet sunmayı taahhüt ediyorum.
               </p>

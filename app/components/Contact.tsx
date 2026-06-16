@@ -71,7 +71,7 @@ export default function Contact() {
               sualp.danaci@cb.com.tr
             </a>
             <a
-              href="https://www.instagram.com/cb.sualp.danaci/"
+              href="https://www.instagram.com/cb.sualpdanaci/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 text-white font-semibold px-6 py-4 rounded-full hover:opacity-90 transition-all hover:scale-105 shadow-lg text-sm sm:text-base"
@@ -80,7 +80,7 @@ export default function Contact() {
               }}
             >
               <InstagramIcon />
-              @cb.sualp.danaci
+              @cb.sualpdanaci
             </a>
           </motion.div>
 
@@ -92,7 +92,7 @@ export default function Contact() {
             className="flex items-center justify-center gap-2 text-gray-400 text-sm"
           >
             <MapPin size={14} className="flex-shrink-0" />
-            <span>Bağlıca, Ankara — Ankara genelinde hizmet</span>
+            <span>Çayyolu, Ankara — Ankara genelinde hizmet</span>
           </motion.div>
         </div>
       </div>

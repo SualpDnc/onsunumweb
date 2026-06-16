@@ -6,13 +6,13 @@ import { Shield, MapPin, HeartHandshake, Clock } from "lucide-react";
 const reasons = [
   {
     icon: Shield,
-    title: "Coldwell Banker Ultra Güvencesi",
-    desc: "Coldwell Banker Ultra çatısı altında, dünyanın en büyük gayrimenkul markasının profesyonel standartları ve etik değerleriyle hizmet veriyorum.",
+    title: "Coldwell Banker KRG Güvencesi",
+    desc: "Coldwell Banker KRG çatısı altında, dünyanın en büyük gayrimenkul markasının profesyonel standartları ve etik değerleriyle hizmet veriyorum.",
   },
   {
     icon: MapPin,
     title: "Ankara Piyasası Bilgisi",
-    desc: "Bağlıca başta olmak üzere Ankara'nın tüm ilçelerinde güncel piyasa bilgisi ve yerel deneyimle yanınızdayım.",
+    desc: "Çayyolu başta olmak üzere Ankara'nın tüm ilçelerinde güncel piyasa bilgisi ve yerel deneyimle yanınızdayım.",
   },
   {
     icon: HeartHandshake,

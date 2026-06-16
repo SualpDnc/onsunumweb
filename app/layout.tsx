@@ -9,12 +9,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sualp Danacı | Coldwell Banker Ultra Gayrimenkul Danışmanı — Ankara",
+  title: "Sualp Danacı | Coldwell Banker KRG Gayrimenkul Danışmanı — Ankara",
   description:
-    "Ankara Bağlıca ve çevresi başta olmak üzere tüm Ankara'da satış, alım ve kiralama konularında profesyonel gayrimenkul danışmanlığı. Sualp Danacı | Coldwell Banker Ultra.",
-  keywords: ["gayrimenkul", "ankara", "bağlıca", "coldwell banker ultra", "emlak", "danışman"],
+    "Ankara Çayyolu ve çevresi başta olmak üzere tüm Ankara'da satış, alım ve kiralama konularında profesyonel gayrimenkul danışmanlığı. Sualp Danacı | Coldwell Banker KRG.",
+  keywords: ["gayrimenkul", "ankara", "çayyolu", "coldwell banker krg", "emlak", "danışman"],
   openGraph: {
-    title: "Sualp Danacı | Coldwell Banker Ultra Gayrimenkul Danışmanı",
+    title: "Sualp Danacı | Coldwell Banker KRG Gayrimenkul Danışmanı",
     description: "Ankara'da güvenilir gayrimenkul danışmanlığı.",
     locale: "tr_TR",
     type: "website",

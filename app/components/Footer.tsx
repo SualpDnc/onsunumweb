@@ -38,7 +38,7 @@ export default function Footer() {
           <div>
             <p className="font-bold text-xl mb-1">Sualp Danacı</p>
             <p className="text-[#B8963E] text-xs tracking-widest uppercase mb-4">
-              Coldwell Banker Ultra
+              Coldwell Banker KRG
             </p>
             <p className="text-white/50 text-sm leading-relaxed">
               Ankara'da güvenilir, profesyonel ve kişisel gayrimenkul danışmanlığı.
@@ -81,13 +81,13 @@ export default function Footer() {
               Sosyal Medya
             </p>
             <a
-              href="https://www.instagram.com/cb.sualp.danaci/"
+              href="https://www.instagram.com/cb.sualpdanaci/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-[#B8963E] transition-colors"
             >
               <InstagramIcon />
-              @cb.sualp.danaci
+              @cb.sualpdanaci
             </a>
           </div>
 
@@ -96,7 +96,7 @@ export default function Footer() {
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-white/30 text-xs">
           <p>© 2026 Sualp Danacı. Tüm hakları saklıdır.</p>
           <p className="text-center sm:text-right">
-            Coldwell Banker Ultra — Bağlıca, Ankara
+            Coldwell Banker KRG — Çayyolu, Ankara
           </p>
         </div>
       </div>
