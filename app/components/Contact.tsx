@@ -1,100 +1,59 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, ArrowRight } from "lucide-react";
+import { useLang } from "./LanguageContext";
 
-function InstagramIcon() {
-  return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
-    </svg>
-  );
-}
+const content = {
+  en: {
+    badge: "Contact",
+    title: "Let's talk",
+    desc: "Whether you have a role in mind, a project idea, or just want to connect — I'd love to hear from you.",
+    cta: "sualpdnc@gmail.com",
+    note: "I typically respond within 24 hours.",
+  },
+  tr: {
+    badge: "İletişim",
+    title: "Konuşalım",
+    desc: "Aklınızda bir pozisyon, proje fikri ya da sadece bağlantı kurmak istiyorsanız — mesaj atmaktan çekinmeyin.",
+    cta: "sualpdnc@gmail.com",
+    note: "Genellikle 24 saat içinde yanıt veririm.",
+  },
+};
 
 export default function Contact() {
+  const { lang } = useLang();
+  const t = content[lang];
+
   return (
-    <section id="iletisim" className="py-16 sm:py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="contact" className="py-20 sm:py-28">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 sm:mb-16"
         >
-          <span className="text-[#B8963E] text-xs font-semibold tracking-widest uppercase">
-            Ulaşın
+          <span className="text-indigo-400 text-xs font-semibold tracking-widest uppercase">
+            {t.badge}
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A2E] mt-3 mb-4">
-            İletişime Geçin
-          </h2>
-          <div className="w-16 h-1 bg-[#B8963E] mx-auto rounded-full" />
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-6">{t.title}</h2>
+          <p className="text-slate-400 text-base sm:text-lg leading-relaxed mb-10 max-w-lg mx-auto">
+            {t.desc}
+          </p>
+
+          <a
+            href="mailto:sualpdnc@gmail.com"
+            className="inline-flex items-center gap-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg shadow-indigo-500/25 text-sm sm:text-base group"
+          >
+            <Mail size={18} />
+            {t.cta}
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+
+          <p className="text-slate-600 text-xs mt-6">{t.note}</p>
         </motion.div>
 
-        <div className="max-w-2xl mx-auto text-center space-y-8">
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-gray-500 leading-relaxed text-base sm:text-lg"
-          >
-            Satmak, almak veya kiralamak istediğiniz bir gayrimenkul için
-            sorularınızı bana iletebilirsiniz. En kısa sürede geri dönüş
-            sağlıyorum.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4"
-          >
-            <a
-              href="mailto:sualp.danaci@cb.com.tr"
-              className="flex items-center justify-center gap-2 bg-[#003087] text-white font-semibold px-6 py-4 rounded-full hover:bg-[#0066CC] transition-all hover:scale-105 shadow-lg shadow-[#003087]/20 text-sm sm:text-base"
-            >
-              <Mail size={18} />
-              sualp.danaci@cb.com.tr
-            </a>
-            <a
-              href="https://www.instagram.com/cb.sualpdanaci/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 text-white font-semibold px-6 py-4 rounded-full hover:opacity-90 transition-all hover:scale-105 shadow-lg text-sm sm:text-base"
-              style={{
-                background: "linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)",
-              }}
-            >
-              <InstagramIcon />
-              @cb.sualpdanaci
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex items-center justify-center gap-2 text-gray-400 text-sm"
-          >
-            <MapPin size={14} className="flex-shrink-0" />
-            <span>Çayyolu, Ankara — Ankara genelinde hizmet</span>
-          </motion.div>
-        </div>
       </div>
     </section>
   );

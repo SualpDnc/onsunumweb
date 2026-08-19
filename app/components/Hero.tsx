@@ -1,82 +1,92 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, User } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
 import Image from "next/image";
+import { useLang } from "./LanguageContext";
+
+const content = {
+  en: {
+    badge: "Open to opportunities",
+    title1: "Software &",
+    title2: "Sales Engineer",
+    desc: "Building bridges between technology and business. A software engineering graduate who turns complex technical concepts into real business value.",
+    cta1: "Get in touch",
+    cta2: "About me",
+    scroll: "Scroll",
+    uni: "Atılım Uni. '24",
+  },
+  tr: {
+    badge: "İş fırsatlarına açığım",
+    title1: "Yazılım &",
+    title2: "Satış Mühendisi",
+    desc: "Teknoloji ve iş dünyası arasında köprüler kuruyorum. Karmaşık teknik konuları gerçek iş değerine dönüştüren bir yazılım mühendisiyim.",
+    cta1: "İletişime geç",
+    cta2: "Hakkımda",
+    scroll: "Keşfet",
+    uni: "Atılım Üni. '24",
+  },
+};
 
 export default function Hero() {
+  const { lang } = useLang();
+  const t = content[lang];
+
   return (
-    <section className="relative min-h-screen flex items-center bg-[#003087]">
-      {/* Decorative backgrounds — isolated overflow */}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Gradient background */}
+      <div className="absolute inset-0 bg-linear-to-br from-slate-950 via-indigo-950 to-slate-900" />
+
+      {/* Decorative orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-125 h-125 bg-indigo-900/10 rounded-full blur-3xl" />
         <div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: `
-              radial-gradient(circle at 20% 50%, #0066CC 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, #B8963E 0%, transparent 40%),
-              radial-gradient(circle at 60% 80%, #0066CC 0%, transparent 30%)`,
-          }}
-        />
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(99,102,241,1) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,1) 1px, transparent 1px)`,
             backgroundSize: "60px 60px",
           }}
         />
       </div>
 
       <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-20">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-          {/* Left — Content (order-2 on mobile so photo appears first) */}
+          {/* Left — Content */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="order-2 lg:order-1 text-center lg:text-left"
           >
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 text-[11px] sm:text-xs tracking-widest uppercase px-3 sm:px-4 py-2 rounded-full mb-5 sm:mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#B8963E] flex-shrink-0" />
-              <span>Coldwell Banker KRG Gayrimenkul Danışmanı</span>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 sm:mb-6">
-              Ankara'da Gayrimenkul ve Yatırım{" "}
-              <span className="text-[#B8963E]">Danışmanlığının</span>{" "}
-              Güvenilir Adresi
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
+              {t.title1}
+              <br />
+              <span className="bg-linear-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
+                {t.title2}
+              </span>
             </h1>
 
-            <p className="text-white/70 text-sm sm:text-base lg:text-lg mb-7 sm:mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Çayyolu ve Ankara genelinde, hayalinizdeki evi bulmanız veya
-              gayrimenkulünüzü en doğru şekilde değerlendirmeniz için buradayım.
+            <p className="text-slate-400 text-base sm:text-lg mb-8 leading-relaxed max-w-md mx-auto lg:mx-0">
+              {t.desc}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <a
-                href="#iletisim"
-                className="flex items-center justify-center gap-2 bg-[#B8963E] text-white font-semibold px-6 py-4 rounded-full hover:bg-[#D4AF5A] transition-all hover:scale-105 shadow-lg text-sm sm:text-base"
+                href="#contact"
+                className="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all hover:scale-105 shadow-lg shadow-indigo-500/25 text-sm"
               >
-                <Mail size={17} />
-                Benimle İletişime Geç
+                <Mail size={16} />
+                {t.cta1}
               </a>
               <a
-                href="#hakkimda"
-                className="flex items-center justify-center gap-2 bg-white/10 border border-white/30 text-white font-semibold px-6 py-4 rounded-full hover:bg-white/20 transition-all text-sm sm:text-base"
+                href="#about"
+                className="flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-slate-200 font-semibold px-7 py-3.5 rounded-full hover:bg-white/10 hover:border-white/20 transition-all text-sm"
               >
-                <User size={17} />
-                Hakkımda
+                {t.cta2}
               </a>
-            </div>
-
-            {/* Trust line — allow wrap, no whitespace-nowrap */}
-            <div className="mt-8 sm:mt-10 flex items-center gap-3 justify-center lg:justify-start">
-              <div className="h-px w-8 sm:w-10 bg-[#B8963E]/50 flex-shrink-0" />
-              <span className="text-white/50 text-[10px] sm:text-xs tracking-widest uppercase text-center">
-                Coldwell Banker KRG Güvencesiyle
-              </span>
-              <div className="h-px flex-1 bg-[#B8963E]/50" />
             </div>
           </motion.div>
 
@@ -87,31 +97,24 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="order-1 lg:order-2 flex justify-center"
           >
-            {/* pb-6 compensates for the -bottom-2 Ankara pill */}
-            <div className="relative p-3 pb-8">
-              <div className="absolute inset-0 border border-[#B8963E]/40 rounded-3xl pointer-events-none" />
+            <div className="relative pb-8">
+              <div className="absolute inset-0 bg-linear-to-br from-indigo-500/30 to-violet-500/30 rounded-3xl blur-2xl scale-110" />
 
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/15">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                 <Image
                   src="/photo-2026.jpg"
                   alt="Sualp Danacı"
                   width={944}
                   height={1018}
                   priority
-                  className="w-[220px] xs:w-[250px] sm:w-[290px] lg:w-[330px] h-auto block"
+                  className="w-55 sm:w-67.5 lg:w-77.5 h-auto block"
                 />
+                <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-slate-950/70 to-transparent" />
               </div>
 
-              {/* Ankara pill */}
-              <div className="absolute bottom-1 left-2 bg-white rounded-xl shadow-xl px-4 py-2.5">
-                <p className="text-[#003087] font-bold text-base sm:text-lg leading-none">Ankara</p>
-                <p className="text-gray-500 text-[11px] sm:text-xs mt-0.5">Genelinde Hizmet</p>
-              </div>
-
-              {/* CB badge */}
-              <div className="absolute -top-2 right-2 bg-[#B8963E] text-white rounded-full w-11 h-11 sm:w-12 sm:h-12 flex flex-col items-center justify-center shadow-lg">
-                <span className="text-[9px] sm:text-[10px] font-bold leading-tight">CB</span>
-                <span className="text-[9px] sm:text-[10px] leading-tight">KRG</span>
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-800 border border-white/10 rounded-xl px-5 py-2.5 shadow-xl whitespace-nowrap">
+                <p className="text-white font-semibold text-sm text-center">Sualp Danacı</p>
+                <p className="text-indigo-400 text-xs text-center mt-0.5">{t.uni}</p>
               </div>
             </div>
           </motion.div>
@@ -119,14 +122,13 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500"
       >
-        <span className="text-[10px] tracking-widest uppercase hidden sm:block">Keşfet</span>
+        <span className="text-[10px] tracking-widest uppercase hidden sm:block">{t.scroll}</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}

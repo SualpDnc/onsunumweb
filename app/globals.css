@@ -6,14 +6,14 @@ html {
 }
 
 body {
-  background-color: #F8F9FA;
-  color: #1A1A2E;
+  background-color: #0F172A;
+  color: #E2E8F0;
   font-family: var(--font-geist-sans), "Inter", sans-serif;
   overflow-x: hidden;
 }
 
 ::selection {
-  background-color: #003087;
+  background-color: #6366F1;
   color: white;
 }
 
@@ -22,10 +22,10 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8F9FA;
+  background: #0F172A;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #003087;
+  background: #6366F1;
   border-radius: 3px;
 }

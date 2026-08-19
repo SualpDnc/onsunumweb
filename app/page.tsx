@@ -1,23 +1,5 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import About from "./components/About";
-import WhyMe from "./components/WhyMe";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Landing from "./components/Landing";
 
 export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <WhyMe />
-        <Contact />
-      </main>
-      <Footer />
-    </>
-  );
+  return <Landing />;
 }
